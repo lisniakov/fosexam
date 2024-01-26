@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+</head>
+<body>
+    <!-- Display the list  -->
+    <h1>Book List</h1>
+    <ul>
+        {% for book in books %}
+            <li>{{ book.title }} by {{ book.author }} ({{ book.pub_year }})</li>
+        {% endfor %}
+    </ul>
+    <!-- Link to the page for adding a new book -->
+    <a href="{{ url_for('add') }}">Add a Book</a>
+</body>
+</html>
